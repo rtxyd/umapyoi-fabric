@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "id": "umapyoi",
+  "version": "${version}",
+  "name": "Umapyoi",
+  "description": "Uma Musume in Minecraft!",
+  "authors": [
+    "LeadRDRK",
+    "Tracen Academy Minecraft Group"
+  ],
+  "contact": {
+    "sources": "https://github.com/LeadRDRK/umapyoi-fabric"
+  },
+  "license": "MIT",
+  "icon": "icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "fabric-datagen": [
+      "net.tracen.umapyoi.UmapyoiData"
+    ],
+    "main": [
+      "net.tracen.umapyoi.Umapyoi"
+    ],
+    "client": [
+      "net.tracen.umapyoi.UmapyoiClient"
+    ]
+  },
+  "mixins": [
+    "umapyoi.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.15.0",
+    "minecraft": "~1.20.1",
+    "java": ">=17",
+    "fabric-api": "*",
+    "trinkets": "*",
+    "owo": "*"
+  },
+  "suggests": {
+    "patchouli": "*",
+    "create": "*",
+    "firstperson": "*"
+  }
+}

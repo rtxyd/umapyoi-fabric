@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:carrot"
+    },
+    {
+      "item": "minecraft:nether_wart"
+    },
+    {
+      "tag": "fabric:sugar"
+    },
+    {
+      "tag": "fabric:water"
+    }
+  ],
+  "result": {
+    "item": "umapyoi:small_energy_drink"
+  }
+}

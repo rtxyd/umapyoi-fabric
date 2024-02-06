@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:carrot"
+    },
+    {
+      "item": "minecraft:carrot"
+    },
+    {
+      "item": "minecraft:wheat"
+    },
+    {
+      "item": "minecraft:egg"
+    },
+    {
+      "tag": "fabric:sugar"
+    },
+    {
+      "tag": "fabric:sugar"
+    },
+    {
+      "tag": "fabric:milk"
+    }
+  ],
+  "result": {
+    "item": "umapyoi:sweet_cupcake"
+  }
+}

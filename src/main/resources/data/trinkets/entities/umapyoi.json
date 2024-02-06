@@ -1,0 +1,9 @@
+{
+  "entities": [
+    "player"
+  ],
+  "slots": [
+    "umapyoi/uma_soul",
+    "umapyoi/uma_suit"
+  ]
+}
