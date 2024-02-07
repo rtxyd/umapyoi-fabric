@@ -335,5 +335,7 @@
   "umastatus.level.6": "§dE+",
   "umastatus.level.7": "§bD",
   "umastatus.level.8": "§bD+",
-  "umastatus.level.9": "§aC"
+  "umastatus.level.9": "§aC",
+  "umapyoi.swim_speed": "Swim Speed",
+  "umapyoi.step_height": "Step Height"
 }

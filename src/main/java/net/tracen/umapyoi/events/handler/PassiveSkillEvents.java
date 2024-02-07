@@ -10,13 +10,12 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 import net.tracen.umapyoi.api.UmapyoiAPI;
+import net.tracen.umapyoi.attributes.ExtraAttributes;
 import net.tracen.umapyoi.data.tag.UmapyoiBlockTags;
 import net.tracen.umapyoi.registry.UmaSkillRegistry;
 import net.tracen.umapyoi.utils.UmaSoulUtils;
 
 import java.util.UUID;
-
-import io.github.fabricators_of_create.porting_lib.attributes.PortingLibAttributes;
 
 public class PassiveSkillEvents {
 
@@ -31,7 +30,7 @@ public class PassiveSkillEvents {
     }
 
     public static void passiveStepHeight(Player player) {
-        AttributeInstance stepHeight = player.getAttribute(PortingLibAttributes.STEP_HEIGHT_ADDITION);
+        AttributeInstance stepHeight = player.getAttribute(ExtraAttributes.STEP_HEIGHT_ADDITION);
         var heightModifier = new AttributeModifier(PASSIVEUUID,
                 "passive_skill_height", 0.5D, Operation.ADDITION);
         if (UmapyoiAPI.getUmaSoul(player).isEmpty()) {

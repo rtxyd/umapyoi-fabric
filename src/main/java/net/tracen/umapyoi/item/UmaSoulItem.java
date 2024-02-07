@@ -38,6 +38,7 @@ import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.GameRules;
 import net.minecraft.world.level.Level;
 import net.tracen.umapyoi.Umapyoi;
+import net.tracen.umapyoi.attributes.ExtraAttributes;
 import net.tracen.umapyoi.client.EmissiveRenderType;
 import net.tracen.umapyoi.client.model.UmaPlayerModel;
 import net.tracen.umapyoi.events.ResumeActionPointCallback;
@@ -65,7 +66,6 @@ import dev.emi.trinkets.api.TrinketItem;
 import dev.emi.trinkets.api.TrinketsApi;
 import dev.emi.trinkets.api.client.TrinketRenderer;
 import dev.emi.trinkets.api.client.TrinketRendererRegistry;
-import io.github.fabricators_of_create.porting_lib.attributes.PortingLibAttributes;
 
 public class UmaSoulItem extends TrinketItem implements TrinketRenderer, CreativeModeTabFiller {
     private static final Comparator<Entry<ResourceKey<UmaData>, UmaData>> COMPARATOR = new UmaDataComparator();
@@ -204,13 +204,13 @@ public class UmaSoulItem extends TrinketItem implements TrinketRenderer, Creativ
                         Umapyoi.CONFIG.UMASOUL_SPEED_PRECENT_ENABLE() ? AttributeModifier.Operation.MULTIPLY_TOTAL
                                 : AttributeModifier.Operation.ADDITION));
 
-        atts.put(PortingLibAttributes.SWIM_SPEED,
+        atts.put(ExtraAttributes.SWIM_SPEED,
                 new AttributeModifier(uuid, "speed_swiming_bonus",
                         getExactProperty(stack, StatusType.SPEED.getId(), Umapyoi.CONFIG.UMASOUL_MAX_SPEED()),
                         Umapyoi.CONFIG.UMASOUL_SPEED_PRECENT_ENABLE() ? AttributeModifier.Operation.MULTIPLY_TOTAL
                                 : AttributeModifier.Operation.ADDITION));
 
-        atts.put(PortingLibAttributes.STEP_HEIGHT_ADDITION,
+        atts.put(ExtraAttributes.STEP_HEIGHT_ADDITION,
                 new AttributeModifier(uuid, "speed_step_bonus",
                         getExactProperty(stack, StatusType.SPEED.getId(), Umapyoi.CONFIG.UMASOUL_MAX_SPEED()),
                         Umapyoi.CONFIG.UMASOUL_SPEED_PRECENT_ENABLE() ? AttributeModifier.Operation.MULTIPLY_TOTAL
