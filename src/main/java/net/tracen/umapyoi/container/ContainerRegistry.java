@@ -5,9 +5,8 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.inventory.MenuType;
 import net.tracen.umapyoi.Umapyoi;
-
-import io.github.fabricators_of_create.porting_lib.util.LazyRegistrar;
-import io.github.fabricators_of_create.porting_lib.util.RegistryObject;
+import net.tracen.umapyoi.registry.LazyRegistrar;
+import net.tracen.umapyoi.registry.RegistryObject;
 
 public class ContainerRegistry {
     public static final LazyRegistrar<MenuType<?>> CONTAINER_TYPES = LazyRegistrar

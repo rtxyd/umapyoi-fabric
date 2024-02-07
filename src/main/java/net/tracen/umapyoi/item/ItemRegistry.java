@@ -17,8 +17,8 @@ import net.tracen.umapyoi.utils.UmaStatusUtils;
 
 import java.util.function.Supplier;
 
-import io.github.fabricators_of_create.porting_lib.util.LazyRegistrar;
-import io.github.fabricators_of_create.porting_lib.util.RegistryObject;
+import net.tracen.umapyoi.registry.LazyRegistrar;
+import net.tracen.umapyoi.registry.RegistryObject;
 
 public class ItemRegistry {
     public static final LazyRegistrar<Item> ITEMS = LazyRegistrar.create(Registries.ITEM, Umapyoi.MODID);

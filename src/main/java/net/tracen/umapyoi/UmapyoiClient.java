@@ -23,8 +23,7 @@ import net.tracen.umapyoi.item.AbstractSuitItem;
 import net.tracen.umapyoi.item.CreativeModeTabFiller;
 import net.tracen.umapyoi.item.ItemRegistry;
 import net.tracen.umapyoi.item.UmaSoulItem;
-
-import io.github.fabricators_of_create.porting_lib.util.RegistryObject;
+import net.tracen.umapyoi.registry.RegistryObject;
 
 public class UmapyoiClient implements ClientModInitializer {
     private static final CreativeModeTab GROUP = FabricItemGroup.builder()

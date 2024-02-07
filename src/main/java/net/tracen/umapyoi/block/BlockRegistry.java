@@ -3,9 +3,8 @@ package net.tracen.umapyoi.block;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.level.block.Block;
 import net.tracen.umapyoi.Umapyoi;
-
-import io.github.fabricators_of_create.porting_lib.util.LazyRegistrar;
-import io.github.fabricators_of_create.porting_lib.util.RegistryObject;
+import net.tracen.umapyoi.registry.LazyRegistrar;
+import net.tracen.umapyoi.registry.RegistryObject;
 
 public class BlockRegistry {
     public static final LazyRegistrar<Block> BLOCKS = LazyRegistrar.create(Registries.BLOCK, Umapyoi.MODID);

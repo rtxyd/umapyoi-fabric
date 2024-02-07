@@ -97,7 +97,7 @@ dependencies {
 
     implementation "com.google.code.findbugs:jsr305:3.0.2"
 
-    ["core", "common", "base", "utility", "lazy_registration", "attributes", "extensions", "transfer", "entity"].each { module ->
+    ["core", "common", "base", "utility", "attributes", "extensions", "transfer", "entity"].each { module ->
         modApi include("io.github.fabricators_of_create.Porting-Lib:${module}:${project.porting_lib_version}") { transitive = false }
     }
 
