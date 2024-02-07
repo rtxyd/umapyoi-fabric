@@ -26,10 +26,9 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.tracen.umapyoi.block.entity.BlockEntityRegistry;
 import net.tracen.umapyoi.block.entity.TrainingFacilityBlockEntity;
+import net.tracen.umapyoi.network.NetworkHooks;
 
 import javax.annotation.Nullable;
-
-import io.github.fabricators_of_create.porting_lib.util.NetworkHooks;
 
 public class TrainingFacilityBlock extends BaseEntityBlock {
     public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;

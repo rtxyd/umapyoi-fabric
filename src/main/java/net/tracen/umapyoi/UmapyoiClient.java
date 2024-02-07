@@ -2,6 +2,7 @@ package net.tracen.umapyoi;
 
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.keybinding.v1.KeyBindingHelper;
+import net.fabricmc.fabric.api.client.networking.v1.ClientPlayNetworking;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.core.Registry;
@@ -23,6 +24,7 @@ import net.tracen.umapyoi.item.AbstractSuitItem;
 import net.tracen.umapyoi.item.CreativeModeTabFiller;
 import net.tracen.umapyoi.item.ItemRegistry;
 import net.tracen.umapyoi.item.UmaSoulItem;
+import net.tracen.umapyoi.network.OpenScreenPacket;
 import net.tracen.umapyoi.registry.RegistryObject;
 
 public class UmapyoiClient implements ClientModInitializer {
@@ -71,5 +73,8 @@ public class UmapyoiClient implements ClientModInitializer {
         KeyBindingHelper.registerKeyBinding(SkillKeyMapping.KEY_USE_SKILL);
         KeyBindingHelper.registerKeyBinding(SkillKeyMapping.KEY_FORMER_SKILL);
         KeyBindingHelper.registerKeyBinding(SkillKeyMapping.KEY_LATTER_SKILL);
+
+        // Networking
+        ClientPlayNetworking.registerGlobalReceiver(OpenScreenPacket.TYPE, OpenScreenPacket::handler);
     }
 }

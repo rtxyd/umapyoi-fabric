@@ -24,10 +24,9 @@ import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.phys.BlockHitResult;
 import net.tracen.umapyoi.block.entity.BlockEntityRegistry;
 import net.tracen.umapyoi.block.entity.ThreeGoddessBlockEntity;
+import net.tracen.umapyoi.network.NetworkHooks;
 
 import javax.annotation.Nullable;
-
-import io.github.fabricators_of_create.porting_lib.util.NetworkHooks;
 
 public class ThreeGoddessBlock extends BaseEntityBlock {
     public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;

@@ -45,6 +45,8 @@ loom {
         }
     }
 
+    accessWidenerPath.set(file("src/main/resources/umapyoi.accesswidener"))
+
     runs {
         // gradlew runDatagen
         datagen {
@@ -97,9 +99,8 @@ dependencies {
 
     implementation "com.google.code.findbugs:jsr305:3.0.2"
 
-    ["core", "common", "base", "utility", "attributes", "extensions", "transfer", "entity"].each { module ->
-        modApi include("io.github.fabricators_of_create.Porting-Lib:${module}:${project.porting_lib_version}") { transitive = false }
-    }
+    modApi include("io.github.fabricators_of_create.Porting-Lib:core:${project.porting_lib_version}") { transitive = false }
+    modApi include("io.github.fabricators_of_create.Porting-Lib:attributes:${project.porting_lib_version}") { transitive = false }
 
     // dependency for Porting-Lib:attributes
     modApi include("com.jamieswhiteshirt:reach-entity-attributes:2.4.0")

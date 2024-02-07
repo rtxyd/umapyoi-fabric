@@ -6,7 +6,8 @@
     "AnvilMenuMixin",
     "BlockBehaviourMixin",
     "PlayerMixin",
-    "ServerPlayerMixin"
+    "ServerPlayerMixin",
+    "ServerPlayerAccessor"
   ],
   "client": [
     "client.ItemInHandLayerMixin",
