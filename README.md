@@ -1,7 +1,7 @@
 # Umapyoi Fabricated
 <a href="https://modrinth.com/mod/umapyoi-fabric"><img src="https://img.shields.io/modrinth/dt/umapyoi-fabric?logo=modrinth&label=&suffix=%20&style=flat&color=242629&labelColor=5ca424&logoColor=1c1c1c" alt="Modrinth"></a>
 
-This is a port of Umapyoi to Fabric and Minecraft 1.20.1. As of now, this port follows the original
+This is a port of Umapyoi to Fabric and Minecraft 1.20+. As of now, this port follows the original
 mod's 1.18.2 version. It also includes a port of some MMLib classes used in the mod.
 
 *- Original README starts here -*
