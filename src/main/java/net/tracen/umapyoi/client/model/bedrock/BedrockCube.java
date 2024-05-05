@@ -167,7 +167,7 @@ public class BedrockCube {
 
     private BedrockPolygon getTexturedQuad(BedrockVertex[] positionsIn, float texWidth, float texHeight,
             Direction direction, FaceUVsItem faces) {
-        FaceItem face = faces.getFace(direction);
+        FaceItem face = faces.getFace(direction) != null ? faces.getFace(direction) : FaceItem.empty();
         if (MathUtils.equalsFloat(face.getUvSize()[0], 0.0F) && MathUtils.equalsFloat(face.getUvSize()[1], 0.0F))
             return null;
         float u1 = face.getUv()[0];

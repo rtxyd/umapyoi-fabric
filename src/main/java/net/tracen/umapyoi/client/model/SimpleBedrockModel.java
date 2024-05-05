@@ -34,6 +34,7 @@ public class SimpleBedrockModel extends Model implements BedrockModel {
         shouldRender = Lists.newLinkedList();
         modelPOJO = null;
         renderBoundingBox = new AABB(-1, 0, -1, 1, 2, 1);
+        emissive = false;
     }
 
     public SimpleBedrockModel(BedrockModelPOJO pojo) {
@@ -77,8 +78,8 @@ public class SimpleBedrockModel extends Model implements BedrockModel {
     }
 
     @Override
-    public void setEmissive() {
-        this.emissive = true;
+    public void setEmissive(boolean emissive) {
+        this.emissive = emissive;
     }
 
     @Override

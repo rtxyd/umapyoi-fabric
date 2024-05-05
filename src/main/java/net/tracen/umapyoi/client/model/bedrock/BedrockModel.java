@@ -42,7 +42,7 @@ public interface BedrockModel {
 
     boolean isEmissive();
 
-    void setEmissive();
+    void setEmissive(boolean emissive);
 
     default void loadModel(BedrockModelPOJO pojo) {
         this.getModelMap().clear();
@@ -73,6 +73,8 @@ public interface BedrockModel {
         float width = description.getVisibleBoundsWidth() / 2.0f;
         float height = description.getVisibleBoundsHeight() / 2.0f;
         this.setRenderBoundingBox(new AABB(offsetX - width, offsetY - height, offsetZ - width, offsetX + width, offsetY + height, offsetZ + width));
+        // Ensure default emissive setting is false, so we can change POJO safely.
+        this.setEmissive(false);
 
         for (BonesItem bones : pojo.getGeometryModelNew().getBones()) {
             this.getIndexBones().put(bones.getName(), bones);
@@ -85,8 +87,8 @@ public interface BedrockModel {
             String parent = bones.getParent();
             BedrockPart model = this.getModelMap().get(name);
             if(name.startsWith("emissive")) {
-                model.setEmissive();
-                this.setEmissive();
+                model.setEmissive(true);
+                this.setEmissive(true);
             }
             model.mirror = bones.isMirror();
 
@@ -165,6 +167,8 @@ public interface BedrockModel {
         float width = pojo.getGeometryModelLegacy().getVisibleBoundsWidth() / 2.0f;
         float height = pojo.getGeometryModelLegacy().getVisibleBoundsHeight() / 2.0f;
         this.setRenderBoundingBox(new AABB(offsetX - width, offsetY - height, offsetZ - width, offsetX + width, offsetY + height, offsetZ + width));
+        // Ensure default emissive setting is false, so we can change POJO safely.
+        this.setEmissive(false);
 
         for (BonesItem bones : pojo.getGeometryModelLegacy().getBones()) {
             this.getIndexBones().put(bones.getName(), bones);
@@ -177,8 +181,8 @@ public interface BedrockModel {
             String parent = bones.getParent();
             BedrockPart model = this.getModelMap().get(name);
             if(name.startsWith("emissive")) {
-                model.setEmissive();
-                this.setEmissive();
+                model.setEmissive(true);
+                this.setEmissive(true);
             }
             model.mirror = bones.isMirror();
 

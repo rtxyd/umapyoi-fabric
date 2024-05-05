@@ -35,6 +35,7 @@ public class BedrockEntityModel<T extends Entity> extends EntityModel<T> impleme
         indexBones = Maps.newHashMap();
         shouldRender = Lists.newLinkedList();
         renderBoundingBox = new AABB(-1, 0, -1, 1, 2, 1);
+        emissive = false;
     }
 
     public BedrockEntityModel(BedrockModelPOJO pojo) {
@@ -78,8 +79,8 @@ public class BedrockEntityModel<T extends Entity> extends EntityModel<T> impleme
     }
 
     @Override
-    public void setEmissive() {
-        this.emissive = true;
+    public void setEmissive(boolean emissive) {
+        this.emissive = emissive;
     }
 
     @Override
